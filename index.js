@@ -19,11 +19,25 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    if (this.items.length === 0) {
+      throw new Error('EmptySortedList');
+    } else return Math.max(...this.items)
+  }
 
-  min() {}
+  min() {
+    if (this.items.length === 0) {
+      throw new Error('EmptySortedList');
+    } else return Math.min(...this.items)
+  }
 
-  sum() {}
+  sum() {
+    let result;
+    for (let i = 0; i < this.items.length; i++) {
+      result += this.items[i];
+    }
+    return result;
+  }
 
   avg() {}
 }
